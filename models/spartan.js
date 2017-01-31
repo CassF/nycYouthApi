@@ -68,8 +68,8 @@ let SpartanSchema = mongoose.Schema({
     },
 
     instructor: {
-        type: Boolean
-        // default: false
+        type: Boolean,
+        default: false
     },
 
     admin: {
