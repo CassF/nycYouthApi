@@ -9,7 +9,10 @@ router.route("/register")
 router.route("/spartan")
     .get(spartanController.showAllSpartans);
 
-// router.route("/spartan/:id")
-//     .get(spartanController.showSpartanDetails);
+router.route("/spartan/:id")
+    .get(spartanController.showOneSpartans);
+
+router.route("/spartan/:id/edit")
+    .put(spartanController.editSpartan);
 
 module.exports = router;

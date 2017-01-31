@@ -30,13 +30,12 @@ let SpartanSchema = mongoose.Schema({
         // required: true
     },
 
-    class: {
+    course: {
         type: String
     },
 
-    classId: {
-        type: String,
-        unique: true
+    courseId: {
+        type: String
     },
 
     address: {
@@ -69,8 +68,8 @@ let SpartanSchema = mongoose.Schema({
     },
 
     instructor: {
-        type: Boolean,
-        default: false
+        type: Boolean
+        // default: false
     },
 
     admin: {

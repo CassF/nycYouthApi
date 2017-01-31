@@ -6,6 +6,8 @@ const app = express();
 const mongoose = require("mongoose");
 const mongodb = require("mongodb");
 
+//mpromise is depreceted - solves this problem. 
+mongoose.Promise = global.Promise;
 //connecting to DB 
 mongoose.connect(process.env.DB);
 
