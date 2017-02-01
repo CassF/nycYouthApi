@@ -10,7 +10,7 @@ class SpartanController {
     static registerSpartan(req, res) {
         spartanLib.createSpartan(req)
             .then(() => {
-                res.status(200).send("Your new spartan has been created");
+                res.status(200).send(res);
             })
             .catch(err => {
                 res.status(400).send(err.message);
