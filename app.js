@@ -1,3 +1,4 @@
+const cors = require('cors');
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -10,7 +11,7 @@ const mongodb = require("mongodb");
 //mpromise is depreceted - solves this problem. 
 mongoose.Promise = global.Promise;
 //connecting to DB 
-mongoose.connect(process.env.DB);
+mongoose.connect("mongodb://localhost/SpartaAttendance");
 
 //Middleware
 app.use(cors());
@@ -21,6 +22,6 @@ app.use(routes);
 
 
 //Specifies the listening port
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server listening on port ${process.env.PORT || 3000}`);
+app.listen(process.env.PORT || 3002, () => {
+    console.log(`Server listening on port ${process.env.PORT || 3002}`);
 });
