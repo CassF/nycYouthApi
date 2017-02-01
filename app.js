@@ -11,7 +11,7 @@ const mongodb = require("mongodb");
 //mpromise is depreceted - solves this problem. 
 mongoose.Promise = global.Promise;
 //connecting to DB 
-mongoose.connect("mongodb://localhost/SpartaAttendance");
+mongoose.connect(process.env.MONGODB_URI);
 
 //Middleware
 app.use(cors());
