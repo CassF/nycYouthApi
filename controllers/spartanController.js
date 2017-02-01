@@ -1,6 +1,4 @@
-const Spartan = require("../models/spartan");
 const spartanLib = require("../lib/spartan");
-const moment = require("moment");
 
 class SpartanController {
     /** 
@@ -9,7 +7,7 @@ class SpartanController {
         * @param {String} res - status response
         * creates a new class object
     **/
-    static makeSpartan(req, res) {
+    static registerSpartan(req, res) {
         spartanLib.createSpartan(req)
             .then(() => {
                 res.status(200).send("Your new spartan has been created");
@@ -44,7 +42,7 @@ class SpartanController {
         * @param {String} res - status response
         * @return {Object} - returns the details of the spartan object that has been clicked
     **/
-    static showOneSpartans(req, res) {
+    static showOneSpartan(req, res) {
         spartanLib.getASpartansDetails(req)
             .then(result => {
                 console.log(result);

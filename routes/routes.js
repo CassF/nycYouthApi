@@ -4,13 +4,13 @@ const spartanController = require("../controllers/spartanController");
 
 
 router.route("/register")
-    .post(spartanController.makeSpartan);
+    .post(spartanController.registerSpartan);
 
-router.route("/spartan")
+router.route("/spartans")
     .get(spartanController.showAllSpartans);
 
 router.route("/spartan/:id")
-    .get(spartanController.showOneSpartans);
+    .get(spartanController.showOneSpartan);
 
 router.route("/spartan/:id/edit")
     .put(spartanController.editSpartan);
