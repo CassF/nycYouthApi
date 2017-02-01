@@ -10,11 +10,10 @@ const mongodb = require("mongodb");
 //mpromise is depreceted - solves this problem. 
 mongoose.Promise = global.Promise;
 
-app.use(cors());
 //connecting to DB 
 mongoose.connect(process.env.MONGODB_URI);
-
 //Middleware
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
