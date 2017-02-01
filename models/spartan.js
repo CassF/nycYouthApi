@@ -30,17 +30,13 @@ let SpartanSchema = mongoose.Schema({
         // required: true
     },
 
-    course: {
+    course_Id: {
         type: String
     },
 
-    // course_Id: {
-    //     type: String
-    // },
-
-    // address: {
-    //     type: String
-    // },
+    address: {
+        type: String
+    },
 
     email: {
         type: String,
@@ -79,14 +75,24 @@ let SpartanSchema = mongoose.Schema({
 
     slackHandle: {
         type: String
+    },
+
+    applicant: {
+        type: String,
+        default: false
+    },
+
+    inTraining: {
+        type: String,
+        default: false
+    },
+    clientSite: {
+        type: String,
+        default: false
+
     }
 
-    // status: {
-    //       applicant:1, 
-    //       inTraining:2, 
-    //       clientSite:3
-    // }
-    
+
 
 });
 
