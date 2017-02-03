@@ -11,7 +11,7 @@ const mongodb = require("mongodb");
 mongoose.Promise = global.Promise;
 
 //connecting to DB 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.DB);
 //Middleware
 app.use(cors());
 app.use(bodyParser.json());
