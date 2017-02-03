@@ -16,19 +16,23 @@ let SpartanSchema = mongoose.Schema({
     dob: {
         type: Date
     },
+    course: {
+        type: String
+    },
 
     course_Id: {
         type: String
     },
 
     address: {
-        type: String,
+        type: String
     },
 
     email: {
         type: String,
         required: true,
         unique: true
+
     },
 
     phoneNumber: {
