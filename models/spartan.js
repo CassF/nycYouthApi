@@ -5,24 +5,24 @@ const moment = require("moment");
 let SpartanSchema = mongoose.Schema({
     firstName: {
         type: String,
-        required: true,
-        validate: {
-            validator: function (firstName) {
-                let re = /^[a-zA-Z\s]/;
-                return re.test(firstName)
-            }
-        }
+        required: true
+        // validate: {
+        //     validator: function (firstName) {
+        //         let re = /^[a-zA-Z\s]/;
+        //         return re.test(firstName)
+        //     }
+        // }
     },
 
     lastName: {
         type: String,
-        required: true,
-        validate: {
-            validator: function (lastName) {
-                let re = /^[a-zA-Z\s]/;
-                return re.test(lastName)
-            }
-        }
+        required: true
+        // validate: {
+        //     validator: function (lastName) {
+        //         let re = /^[a-zA-Z\s]/;
+        //         return re.test(lastName)
+        //     }
+        // }
     },
 
     dob: {
@@ -35,19 +35,19 @@ let SpartanSchema = mongoose.Schema({
 
     address: {
         type: String,
-        required: true
+        // required: true
     },
 
     email: {
         type: String,
         required: true,
         unique: true,
-        validate: {
-            validator: function (email) {
-                let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                return re.test(email)
-            }
-        }
+        // validate: {
+        //     validator: function (email) {
+        //         let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        //         return re.test(email)
+        //     }
+        // }
     },
 
     phoneNumber: {
