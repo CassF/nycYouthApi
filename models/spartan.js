@@ -28,6 +28,9 @@ let SpartanSchema = mongoose.Schema({
     dob: {
         type: Date
     },
+    course: {
+        type: String
+    },
 
     course_Id: {
         type: String
