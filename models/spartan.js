@@ -6,28 +6,27 @@ let SpartanSchema = mongoose.Schema({
     firstName: {
         type: String,
         required: true,
-        // validate: {
-        //     validator: function (firstName) {
-        //         let re = /^[a-zA-Z\s]+$/;
-        //         return re.test(firstName)
-        //     }
-        // }
+        validate: {
+            validator: function (firstName) {
+                let re = /^[a-zA-Z\s]/;
+                return re.test(firstName)
+            }
+        }
     },
 
     lastName: {
         type: String,
         required: true,
-        // validate: {
-        //     validator: function (lastName) {
-        //         let re = /^[a-zA-Z\s]+$/;
-        //         return re.test(lastName)
-        //     }
-        // }
+        validate: {
+            validator: function (lastName) {
+                let re = /^[a-zA-Z\s]/;
+                return re.test(lastName)
+            }
+        }
     },
 
     dob: {
         type: Date
-        // required: true
     },
 
     course_Id: {
@@ -35,19 +34,20 @@ let SpartanSchema = mongoose.Schema({
     },
 
     address: {
-        type: String
+        type: String,
+        required: true
     },
 
     email: {
         type: String,
         required: true,
-        unique: true
-        // validate: {
-        //     validator: function (email) {
-        //         let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        //         return re.test(email)
-        //     }
-        // }
+        unique: true,
+        validate: {
+            validator: function (email) {
+                let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                return re.test(email)
+            }
+        }
     },
 
     phoneNumber: {
@@ -56,11 +56,13 @@ let SpartanSchema = mongoose.Schema({
     },
 
     emergencyContactName: {
-        type: String
+        type: String,
+        required: true
     },
 
     emergencyContactNo: {
-        type: String
+        type: String,
+        required: true
     },
 
     instructor: {
@@ -78,16 +80,16 @@ let SpartanSchema = mongoose.Schema({
     },
 
     applicant: {
-        type: String,
+        type: Boolean,
         default: false
     },
 
     inTraining: {
-        type: String,
+        type: Boolean,
         default: false
     },
     clientSite: {
-        type: String,
+        type: Boolean,
         default: false
 
     }

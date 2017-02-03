@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(routes);
 
-
 //Specifies the listening port
 app.listen(process.env.PORT || 3002, () => {
     console.log(`Server listening on port ${process.env.PORT || 3002}`);
