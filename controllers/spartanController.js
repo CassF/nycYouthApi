@@ -110,7 +110,6 @@ class SpartanController {
             }
             else {
                 res.status(200).send(result);
-                console.log(result);
             }
         });
     }
