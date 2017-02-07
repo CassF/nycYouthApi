@@ -17,7 +17,7 @@ router.route("/spartan/:id")
 router.route("/spartan/:id/edit")
     .put(spartanController.editSpartan);
 
-router.route("/spartan")
+router.route("/instructors")
     .get(spartanController.getInstructor);
     
 module.exports = router;
