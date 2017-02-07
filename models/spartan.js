@@ -42,20 +42,13 @@ let SpartanSchema = mongoose.Schema({
 
     emergencyContactName: {
         type: String,
-        required: true
     },
 
     emergencyContactNo: {
         type: String,
-        required: true
     },
 
     instructor: {
-        type: Boolean,
-        default: false
-    },
-
-    admin: {
         type: Boolean,
         default: false
     },
@@ -76,7 +69,11 @@ let SpartanSchema = mongoose.Schema({
     clientSite: {
         type: Boolean,
         default: false
+  },
 
+    onBench: {
+        type: Boolean,
+        default: false
     }
 
 
