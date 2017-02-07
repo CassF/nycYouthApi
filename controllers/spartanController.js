@@ -109,6 +109,7 @@ class SpartanController {
                 res.status(400).send(err.message);
             }
             else {
+                console.log(result);
                 res.status(200).send(result);
             }
         });
