@@ -58,16 +58,12 @@ class SpartanController {
             }
         });
     }
-
-
-
-
-    //     /** 
-    //     * @method editSpartan
-    //     * @param {String} req - new spartan details
-    //     * @return {Object} - returns the details of the spartan object that has been clicked
-    //     **/
-    static editSpartan(req, res) {
+        /** 
+        * @method editSpartan
+        * @param {String} req - new spartan details
+        * @return {Object} - returns the details of the spartan object that has been clicked
+        **/
+        static editSpartan(req, res) {
         Spartan.findById(req.params.id, (err, spartan) => {
             // Handle any possible database errors
             if (err) {
@@ -101,8 +97,24 @@ class SpartanController {
             }
         })
     }
+    /** 
+    * @method show instructor id
+    * @param {String} req - instructor details
+    * @param {String} res - status response
+    * @return {Object} - returns an existing spartan object from the database
+    **/
+    static getInstructor(req, res) {
+        Spartan.find({ instructor: true }, (err, result) => {
+            if (err) {
+                res.status(400).send(err.message);
+            }
+            else {
+                res.status(200).send(result);
+                console.log(result);
+            }
+        });
+    }
 }
-
 
 // exports ClassController
 module.exports = SpartanController;
