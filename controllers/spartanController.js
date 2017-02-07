@@ -115,5 +115,5 @@ class SpartanController {
     }
 }
 
-// exports ClassController
+// exports SpartanController
 module.exports = SpartanController;
