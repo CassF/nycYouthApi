@@ -10,11 +10,11 @@ router.route("/spartans")
     .get(spartanController.showAllSpartans);
 
 //"/spartans/:id"
-router.route("/spartan/:id")
+router.route("/spartans/:id")
     .get(spartanController.showOneSpartan);
 
 // "/spartans/:id"
-router.route("/spartan/:id/edit")
+router.route("/spartans/:id/edit")
     .put(spartanController.editSpartan);
 
 router.route("/instructors")
