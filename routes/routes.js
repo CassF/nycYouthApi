@@ -13,9 +13,6 @@ router.route("/spartans")
 router.route("/spartans/:id")
       .get(spartanController.showOneSpartan)
       .put(spartanController.editSpartan);
-// "/spartans/:id"
-// router.route("/spartans/:id/edit")
-//     .put(spartanController.editSpartan);
 
 router.route("/instructors")
     .get(spartanController.getInstructor);

@@ -83,6 +83,10 @@ class SpartanController {
                 spartan.instructor = req.body.instructor || spartan.instructor;
                 spartan.admin = req.body.admin || spartan.admin;
                 spartan.slackHandle = req.body.slackHandle || spartan.slackHandle;
+                spartan.inTraining = req.body.inTraining || spartan.inTraining;
+                spartan.onBench = req.body.onBench || spartan.onBench;
+                spartan.applicant = req.body.applicant || spartan.applicant;
+                spartan.clientSite = req.body.clientSite || spartan.clientSite;
 
                 // Save the updated document back to the database
                 spartan.save((err, spartan) => {
