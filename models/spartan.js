@@ -80,4 +80,4 @@ let SpartanSchema = mongoose.Schema({
 
 });
 
-module.exports = mongoose.model("spartans", SpartanSchema);
+module.exports = mongoose.model("SpartanModel", SpartanSchema);
