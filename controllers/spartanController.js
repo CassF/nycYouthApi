@@ -46,7 +46,7 @@ class SpartanController {
     **/
     static showOneSpartan(req, res) {
         // spartanLib.getASpartansDetails(req)
-
+        console.log(req.params.id)
         Spartan.findById({ _id: req.params.id }, (err, spartan) => {
             if (err) {
                 res.status(400).send(err.message);

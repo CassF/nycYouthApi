@@ -3,7 +3,7 @@ const router = express.Router();
 const spartanController = require("../controllers/spartanController");
 
 //"/spartans/new"
-router.route("/register")
+router.route("/spartans/new")
     .post(spartanController.registerSpartan);
 
 router.route("/spartans")
@@ -11,13 +11,14 @@ router.route("/spartans")
 
 //"/spartans/:id"
 router.route("/spartans/:id")
-    .get(spartanController.showOneSpartan);
-
+      .get(spartanController.showOneSpartan)
+      .put(spartanController.editSpartan);
 // "/spartans/:id"
-router.route("/spartans/:id/edit")
-    .put(spartanController.editSpartan);
+// router.route("/spartans/:id/edit")
+//     .put(spartanController.editSpartan);
 
 router.route("/instructors")
     .get(spartanController.getInstructor);
     
 module.exports = router;
+
