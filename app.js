@@ -5,7 +5,6 @@ const routes = require("./routes/routes");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const mongodb = require("mongodb");
 
 //mpromise is depreceted - solves this problem. 
 mongoose.Promise = global.Promise;
