@@ -74,9 +74,6 @@ let SpartanSchema = mongoose.Schema({
        type: Boolean,
        default: false
    }
-
-
-
 });
 
 module.exports = mongoose.model("SpartanModel", SpartanSchema);

@@ -64,9 +64,12 @@ class SpartanController {
         static editSpartan(req, res) {
         Spartan.findById(req.params.id, (err, spartan) => {
             // Handle any possible database errors
+            // console.log(req.body);
             if (err) {
                 res.status(400).send(err);
             } else {
+                console.log(spartan)
+                // console.log(req.body.firstName)
                 // Update each attribute with any possible attribute that may have been submitted in the body of the request
                 // If that attribute isn't in the request body, default back to whatever it was before.
                 spartan.firstName = req.body.firstName || spartan.firstName;
@@ -86,6 +89,7 @@ class SpartanController {
                 spartan.applicant = req.body.applicant || spartan.applicant;
                 spartan.clientSite = req.body.clientSite || spartan.clientSite;
 
+                console.log(spartan)
                 // Save the updated document back to the database
                 spartan.save((err) => {
                     if (err) {
