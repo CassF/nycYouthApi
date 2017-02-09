@@ -56,12 +56,12 @@ class SpartanController {
             }
         });
     }
-        /** 
-        * @method editSpartan
-        * @param {String} req - new spartan details
-        * @return {Object} - returns the details of the spartan object that has been clicked
-        **/
-        static editSpartan(req, res) {
+    /** 
+    * @method editSpartan
+    * @param {String} req - new spartan details
+    * @return {Object} - returns the details of the spartan object that has been clicked
+    **/
+    static editSpartan(req, res) {
         Spartan.findById(req.params.id, (err, spartan) => {
             // Handle any possible database errors
             // console.log(req.body);
