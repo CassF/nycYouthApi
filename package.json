@@ -1,0 +1,29 @@
+{
+  "name": "spartanregistry",
+  "version": "1.0.0",
+  "description": "API for handling spartan consultant information",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spartaglobal/SpartaRegistry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spartaglobal/SpartaRegistry/issues"
+  },
+  "homepage": "https://github.com/spartaglobal/SpartaRegistry#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "moment": "^2.17.1",
+    "mongodb": "^2.2.22",
+    "mongoose": "^4.7.8",
+    "nodemon": "^1.11.0"
+  }
+}
