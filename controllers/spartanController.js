@@ -63,7 +63,6 @@ class SpartanController {
         **/
         static editSpartan(req, res) {
         Spartan.findById(req.params.id, (err, spartan) => {
-            
             // Handle any possible database errors
             if (err) {
                 res.status(400).send(err);
@@ -88,7 +87,7 @@ class SpartanController {
                 spartan.clientSite = req.body.clientSite || spartan.clientSite;
 
                 // Save the updated document back to the database
-                spartan.save((err, spartan) => {
+                spartan.save((err) => {
                     if (err) {
                         res.status(400).send(err);
                     } else {
