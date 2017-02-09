@@ -72,7 +72,7 @@ class SpartanController {
                 // If that attribute isn't in the request body, default back to whatever it was before.
                 spartan.firstName = req.body.firstName || spartan.firstName;
                 spartan.lastName = req.body.lastName || spartan.lastName;
-                spartan.dob = req.body.dob = req.body.dob = moment.utc(req.body.dob, "YYYY-MM-DD") || spartan.dob;
+                spartan.dob = req.body.dob = req.body.dob || spartan.dob;
                 spartan.course = req.body.course || spartan.course;
                 spartan.course_Id = req.body.course_Id || spartan.course_Id;
                 spartan.address = req.body.address || spartan.address;
