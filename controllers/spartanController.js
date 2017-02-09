@@ -66,7 +66,7 @@ class SpartanController {
             
             // Handle any possible database errors
             if (err) {
-                res.status(400).send(err.message);
+                res.status(400).send(err);
             } else {
                 // Update each attribute with any possible attribute that may have been submitted in the body of the request
                 // If that attribute isn't in the request body, default back to whatever it was before.
@@ -90,7 +90,7 @@ class SpartanController {
                 // Save the updated document back to the database
                 spartan.save((err, spartan) => {
                     if (err) {
-                        res.status(400).send(err.message);
+                        res.status(400).send(err);
                     } else {
                         res.status(200).send({
                             editedDetails: spartan
