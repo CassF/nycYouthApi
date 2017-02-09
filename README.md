@@ -25,7 +25,7 @@ registration details of each spartan whether they are a instructor or a student 
 
 * Cassandra Frimpong
 * Simeron Taak
-* Lauren Castello
+* Lauren Costello
 
 ## Usage
 
