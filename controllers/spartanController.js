@@ -45,8 +45,6 @@ class SpartanController {
         * @return {Object} - returns the details of the spartan object that has been clicked
     **/
     static showOneSpartan(req, res) {
-        // spartanLib.getASpartansDetails(req)
-        console.log(req.params.id)
         Spartan.findById({ _id: req.params.id }, (err, spartan) => {
             if (err) {
                 res.status(400).send(err.message);
@@ -65,6 +63,7 @@ class SpartanController {
         **/
         static editSpartan(req, res) {
         Spartan.findById(req.params.id, (err, spartan) => {
+            
             // Handle any possible database errors
             if (err) {
                 res.status(400).send(err.message);
@@ -75,13 +74,13 @@ class SpartanController {
                 spartan.lastName = req.body.lastName || spartan.lastName;
                 spartan.dob = req.body.dob = req.body.dob = moment.utc(req.body.dob, "YYYY-MM-DD") || spartan.dob;
                 spartan.course = req.body.course || spartan.course;
+                spartan.course_Id = req.body.course_Id || spartan.course_Id;
                 spartan.address = req.body.address || spartan.address;
                 spartan.email = req.body.email || spartan.email;
                 spartan.phoneNumber = req.body.phoneNumber || spartan.phoneNumber;
                 spartan.emergencyContactName = req.body.emergencyContactName || spartan.emergencyContactName;
                 spartan.emergencyContactNo = req.body.emergencyContactNo || spartan.emergencyContactNo;
                 spartan.instructor = req.body.instructor || spartan.instructor;
-                spartan.admin = req.body.admin || spartan.admin;
                 spartan.slackHandle = req.body.slackHandle || spartan.slackHandle;
                 spartan.inTraining = req.body.inTraining || spartan.inTraining;
                 spartan.onBench = req.body.onBench || spartan.onBench;
@@ -113,7 +112,6 @@ class SpartanController {
                 res.status(400).send(err.message);
             }
             else {
-                console.log(result);
                 res.status(200).send(result);
             }
         });

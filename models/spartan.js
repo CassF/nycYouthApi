@@ -30,8 +30,7 @@ let SpartanSchema = mongoose.Schema({
 
    email: {
        type: String,
-       required: true,
-       unique: true
+       required: true
 
    },
 
