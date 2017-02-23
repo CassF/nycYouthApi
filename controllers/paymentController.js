@@ -13,7 +13,7 @@ class paymentController {
                     } else {
                         return new Promise(
                             (reject, resolve) => {
-                                //console.log(resolveArray);
+                                console.log(res);
                                 Youth.findByIdAndUpdate(result.id, { $inc: { balance: req.body.amount } }, function (err, res) {
                                     if (err) {
                                         reject(err);
