@@ -1,5 +1,5 @@
 {
-  "name": "spartanregistry",
+  "name": "nyc-youth-tracker",
   "version": "1.0.0",
   "description": "API for handling spartan consultant information",
   "main": "app.js",
@@ -18,12 +18,11 @@
   "homepage": "https://github.com/spartaglobal/SpartaRegistry#readme",
   "dependencies": {
     "body-parser": "^1.16.0",
-    "cors": "^2.8.1",
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
-    "moment": "^2.17.1",
     "mongodb": "^2.2.22",
     "mongoose": "^4.7.8",
     "nodemon": "^1.11.0"
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,18 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const spartanController = require("../controllers/spartanController");
+const youthController = require("../controllers/youthController");
+const paymentController = require("../controllers/paymentController");
 
-//"/spartans/new"
-router.route("/spartans")
-    .post(spartanController.registerSpartan)
-    .get(spartanController.showAllSpartans);
+router.route("/youth")
+    .post(youthController.createYouth);
 
-//"/spartans/:id"
-router.route("/spartans/:id")
-      .get(spartanController.showOneSpartan)
-      .put(spartanController.editSpartan);
+router.route("/youth/:id")
+    .put(youthController.addPaymentToBalance);
 
-router.route("/instructors")
-    .get(spartanController.getInstructor);
-    
+router.route("/payments")
+    .post(paymentController.createPayment);
+
 module.exports = router;
