@@ -10,6 +10,7 @@ class PaymentController {
                 res.status(400).send(err.message);
             });
     }
+
 }
 
 module.exports = PaymentController;
