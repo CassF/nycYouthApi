@@ -1,4 +1,5 @@
 const Payment = require("../models/payment");
+const Youth = require("../models/youth");
 
 class paymentController {
 
