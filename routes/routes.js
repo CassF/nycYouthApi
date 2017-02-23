@@ -11,7 +11,6 @@ router.route("/youth/:id")
     .get(youthController.showOneYouth);
 
 router.route("/payments")
-    .post(paymentController.createPayment
-        .put(paymentController.addPaymentToBalance));
+    .post(paymentController.createPayment);
 
 module.exports = router;

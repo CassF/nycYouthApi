@@ -10,6 +10,7 @@ class paymentController {
                     if (err) {
                         reject(err);
                     } else {
+                        addPaymentToBalance(req, result);
                         resolve();
                     }
                 });
