@@ -3,7 +3,7 @@ const Payment = require("../lib/payment");
 class PaymentController {
     static newPayment(req, res) {
         Payment.createPayment(req)
-            .then((res) => {
+            .then((result) => {
                 Payment.addPaymentToBalance(req, res)
             })
             .catch(err => {
