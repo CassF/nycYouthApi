@@ -4,10 +4,12 @@ const youthController = require("../controllers/youthController");
 const paymentController = require("../controllers/paymentController");
 
 router.route("/youth")
-    .post(youthController.createYouth);
-
+    .post(youthController.createYouth)
+    .get(youthController.showAllYouth);
+    
 router.route("/youth/:id")
-    .put(youthController.addPaymentToBalance);
+    .put(youthController.addPaymentToBalance)
+    .get(youthController.showOneYouth);
 
 router.route("/payments")
     .post(paymentController.createPayment);
