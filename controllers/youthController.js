@@ -6,11 +6,10 @@ class youthController {
         return new Promise(
             (resolve, reject) => {
                 Youth.create(req.body, function (err, youth) {
-                    console.log(youth);
                     if (err) {
                         reject(err);
                     } else {
-                        resolve();
+                        resolve(youth);
                     }
                 });
             }
@@ -30,7 +29,7 @@ class youthController {
         });
     }
 
-        static showOneYouth(req, res) {
+    static showOneYouth(req, res) {
         Youth.findById({ _id: req.params.id }, (err, youth) => {
             if (err) {
                 res.status(400).send(err.message);
