@@ -17,6 +17,22 @@ class paymentController {
         )
     }
 
+    static addPaymentToBalance(req, result) {
+        return new Promise(
+            (reject, resolve) => {
+                //console.log(resolveArray);
+                Youth.findByIdAndUpdate(result.id, { $inc: { balance: req.body.amount } }, function (err, res) {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        resolve();
+                        console.log("findbyidandupdate worked");
+                    }
+                });
+            }
+        )
+    }
+
 }
 
 module.exports = paymentController;

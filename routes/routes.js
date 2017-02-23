@@ -6,12 +6,12 @@ const paymentController = require("../controllers/paymentController");
 router.route("/youth")
     .post(youthController.createYouth)
     .get(youthController.showAllYouth);
-    
+
 router.route("/youth/:id")
-    .put(youthController.addPaymentToBalance)
     .get(youthController.showOneYouth);
 
 router.route("/payments")
-    .post(paymentController.createPayment);
+    .post(paymentController.createPayment
+        .put(paymentController.addPaymentToBalance));
 
 module.exports = router;
