@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spartaglobal/SpartaRegistry/issues"
+    "url": "https://github.com/CassF/nycYouthApi/issues"
   },
-  "homepage": "https://github.com/spartaglobal/SpartaRegistry#readme",
+  "homepage": "https://github.com/CassF/nycYouthApi#readme",
   "dependencies": {
     "body-parser": "^1.16.0",
     "dotenv": "^4.0.0",
