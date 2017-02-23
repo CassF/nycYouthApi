@@ -14,7 +14,7 @@ class paymentController {
                         return new Promise(
                             (reject, resolve) => {
                                 console.log(res);
-                                Youth.findByIdAndUpdate(res.id, { $inc: { balance: req.body.amount } }, function (err, res) {
+                                Youth.findByIdAndUpdate(payment.youth_Id, { $inc: { balance: req.body.amount } }, function (err, res) {
                                     if (err) {
                                         reject(err);
                                     } else {
