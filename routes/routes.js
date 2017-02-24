@@ -3,6 +3,10 @@ const router = express.Router();
 const youthController = require("../controllers/youthController");
 const paymentController = require("../controllers/paymentController");
 const paymentLib = require("../lib/payment");
+const loginController = require("../controllers/loginController");
+
+router.route("/security")
+    .post(loginController.verifyPassword);
 
 router.route("/youth")
     .post(youthController.createYouth)
