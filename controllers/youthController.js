@@ -1,7 +1,6 @@
 const Youth = require("../models/youth");
 
 class youthController {
-    //promise to handle the creation of a new user
     static createYouth(req, res) {
         Youth.create(req.body, function (err, youth) {
             if (err) {
