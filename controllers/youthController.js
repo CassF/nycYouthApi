@@ -76,6 +76,37 @@ class youthController {
             }
         });
     }
+
+    //     static totalPayment(req, res) {
+    //     Youth.find({}, 'balance', (err, docs) => {
+    //         if (err) {
+    //             res.status(400).send(err.message);
+    //         }
+    //         else {
+    //             res.status(200).send({
+    //                 allPayments: docs
+    //             })
+    //         }
+    //     });
+    // }
+
+        static totalPayment(req, res) {
+        Youth.aggregate([ { $group: { _id: null, amount: { $sum: "$balance" } } }], (err, docs) => {
+            if (err) {
+                res.status(400).send(err.message);
+            }
+            else {
+                res.status(200).send({
+                    allPayments: docs
+                })
+            }
+        });
+    }
+
+//     db.tickets.aggregate([
+//     { $match: { time: {$gte: a, $lte: tomorrow} } },
+//     { $group: { _id: null, amount: { $sum: "$amount" } } }
+// ])
 }
 
 module.exports = youthController;

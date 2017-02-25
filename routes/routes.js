@@ -27,4 +27,7 @@ router.route("/payments")
 router.route("/payments/:id")
     .get(paymentLib.showPayments);
 
+router.route("/totalpayment")
+    .get(youthController.totalPayment);
+
 module.exports = router;
