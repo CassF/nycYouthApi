@@ -13,6 +13,12 @@ let YouthSchema = mongoose.Schema({
     balance: {
         type: Number,
         default: 0
+    },
+    female: {
+        type: Boolean
+    },
+    male: {
+        type: Boolean
     }
 });
 
