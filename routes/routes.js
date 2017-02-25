@@ -12,6 +12,12 @@ router.route("/youth")
     .post(youthController.createYouth)
     .get(youthController.showAllYouth);
 
+router.route("/youth/females")
+    .get(youthController.showAllFemales);
+
+router.route("/youth/males")
+    .get(youthController.showAllMales);
+
 router.route("/youth/:id")
     .get(youthController.showOneYouth);
 
