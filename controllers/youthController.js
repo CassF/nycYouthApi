@@ -58,11 +58,11 @@ class youthController {
         });
     }
 
-        /** 
-    * @method showAllMales
-    * @param {String} req - spartan details
-    * @param {String} res - status response
-    * @return {Object} - returns an existing spartan object from the database
+    /** 
+* @method showAllMales
+* @param {String} req - spartan details
+* @param {String} res - status response
+* @return {Object} - returns an existing spartan object from the database
 **/
     static showAllMales(req, res) {
         Youth.find({ male: true }, (err, result) => {
@@ -77,21 +77,8 @@ class youthController {
         });
     }
 
-    //     static totalPayment(req, res) {
-    //     Youth.find({}, 'balance', (err, docs) => {
-    //         if (err) {
-    //             res.status(400).send(err.message);
-    //         }
-    //         else {
-    //             res.status(200).send({
-    //                 allPayments: docs
-    //             })
-    //         }
-    //     });
-    // }
-
-        static totalPayment(req, res) {
-        Youth.aggregate([ { $group: { _id: null, amount: { $sum: "$balance" } } }], (err, docs) => {
+    static totalPayment(req, res) {
+        Youth.aggregate([{ $group: { _id: null, amount: { $sum: "$balance" } } }], (err, docs) => {
             if (err) {
                 res.status(400).send(err.message);
             }
@@ -102,11 +89,6 @@ class youthController {
             }
         });
     }
-
-//     db.tickets.aggregate([
-//     { $match: { time: {$gte: a, $lte: tomorrow} } },
-//     { $group: { _id: null, amount: { $sum: "$amount" } } }
-// ])
 }
 
 module.exports = youthController;
