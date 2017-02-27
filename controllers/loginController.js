@@ -9,7 +9,6 @@ class LoginController {
             let checkedPassword = hash.verify(password, hashedPassword);
             checkedPassword ? res.status(200).send(checkedPassword) : res.status(400).send('error');
         }else{
-            console.log("sec");
             res.status(400).send('error');
         }
     }
