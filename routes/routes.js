@@ -4,6 +4,10 @@ const youthController = require("../controllers/youthController");
 const paymentController = require("../controllers/paymentController");
 const paymentLib = require("../lib/payment");
 const loginController = require("../controllers/loginController");
+const homeController = require("../controllers/homeController");
+
+router.route("/home")
+.post(homeController.createCharge);
 
 router.route("/security")
     .post(loginController.verifyPassword);

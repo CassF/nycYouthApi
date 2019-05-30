@@ -4,11 +4,8 @@
   "description": "API for handling spartan consultant information",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/spartaglobal/SpartaRegistry.git"
   },
   "author": "",
   "license": "ISC",
@@ -17,15 +14,16 @@
   },
   "homepage": "https://github.com/CassF/nycYouthApi#readme",
   "dependencies": {
-    "body-parser": "^1.16.0",
-    "cors": "^2.8.1",
-    "dotenv": "^4.0.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.1.0",
     "ejs": "^2.5.6",
-    "express": "^4.14.0",
-    "mongodb": "^2.2.22",
-    "mongoose": "^4.7.8",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.14",
     "nodemon": "^1.11.0",
-    "password-hash": "^1.2.2"
+    "password-hash": "^1.2.2",
+    "stripe": "^6.17.0"
   },
   "devDependencies": {}
 }
